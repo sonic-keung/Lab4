@@ -4,15 +4,18 @@
 
 class Bird : public Animal { // inherit Animal class
 private:
-    double location[3];
+    double location[3]; // x, y, z coordinates for bird
 public:
+    // default constructor
     Bird();
 
+    // constructor that accepts 4 parameters
     Bird(int age1, double x, double y, double z);
 
     // moves the animal to the set of coordinates
     virtual void moves(double x, double y, double z);
 
+    // destructor
     virtual ~Bird();
 
     // copy constructor

@@ -3,11 +3,13 @@
 #pragma once
 class Canine : public Animal {
 private:
+    // coordinates
     double location[2];
 
 public:
     Canine(); // default constructor
 
+    // constructor that accepts 3 parameters
     Canine(int age1, double x1, double y1);
 
     // moves the animal to the set of coordinates
@@ -22,6 +24,7 @@ public:
     void sleep();
     void eat();
     void hunt();
+
     // getters
     long getId() const;
     int getAge() const;
@@ -29,6 +32,7 @@ public:
     double getX() const;
     double getY() const;
 
+    // insertion operator
     friend std::ostream& operator<<(std::ostream& os, const Canine&);
 
 };
