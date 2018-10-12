@@ -21,8 +21,8 @@ public:
     // copy constructor
     Canine(const Canine &a);
 
-    void sleep();
-    void eat();
+    void sleep() override;
+    void eat() override;
     void hunt();
 
     // getters

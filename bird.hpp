@@ -20,8 +20,8 @@ public:
 
     // copy constructor
     Bird(const Bird &a);
-    void sleep();
-    void eat();
+    void sleep() override;
+    void eat() override;
 
     // getters
     long getId() const;
