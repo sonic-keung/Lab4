@@ -4,7 +4,6 @@
 
 class Bird : public Animal { // inherit Animal class
 private:
-    double location[3]; // x, y, z coordinates for bird
 public:
     // default constructor
     Bird();
@@ -22,14 +21,6 @@ public:
     Bird(const Bird &a);
     void sleep() override;
     void eat() override;
-
-    // getters
-    long getId() const;
-    int getAge() const;
-    bool getAlive() const;
-    double getX() const;
-    double getY() const;
-    double getZ() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Bird&);
 

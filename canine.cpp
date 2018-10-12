@@ -35,40 +35,16 @@ void Canine::hunt() {
     std::cout << "Canine hunt" << std::endl;
 }
 
-// get id of canine
-long Canine::getId() const {
-    return Animal::getId();
-}
-
-// get age of canine
-int Canine::getAge() const {
-    return Animal::getAge();
-}
-
-// see if canine is alive
-bool Canine::getAlive() const {
-    return Animal::getAlive();
-}
-
-// get canine x position
-double Canine::getX() const {
-    return Animal::getX();
-}
-
-// get canine y position
-double Canine::getY() const {
-    return Animal::getY();
-}
-
-
 std::ostream& operator<<(std::ostream& os, const Canine& a) {
-    if (a.getAlive())
+    os << "Canine age: " << a.age << std::endl;
+    os << "Canine id: " << a.id << std::endl;
+
+    if (a.alive)
         os << "Canine is alive" << std::endl;
+    else
+        os << "Dead" << std::endl;
 
-    os << "Canine age: " << a.getAge() << std::endl;
-    os << "Canine id: " << a.getId() << std::endl;
-    os << "Canine position: " << "X: " << a.getX() << " Y: " << a.getY()
-    << std::endl;
-
+    os << "Canine position: " << "X: " << a.location[0] << " Y: " << a.location[1]
+       << std::endl;
     return os;
 }

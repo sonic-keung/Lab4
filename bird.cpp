@@ -37,44 +37,17 @@ void Bird::eat() {
     std::cout << "Bird eat" << std::endl;
 }
 
-// get id of the bird
-long Bird::getId() const {
-    return Animal::getId();
-}
-
-// get age of the bird
-int Bird::getAge() const {
-    return Animal::getAge();
-}
-
-// check if bird is alive
-bool Bird::getAlive() const {
-    return Animal::getAlive();
-}
-
-// get x position of bird
-double Bird::getX() const {
-    return Animal::getX();
-}
-
-// get y position of bird
-double Bird::getY() const {
-    return Animal::getY();
-}
-
-// get z position of bird
-double Bird::getZ() const {
-    return location[2];
-}
-
 // insertion operator
-std::ostream& operator<<(std::ostream& os, const Bird& b) {
-    if (b.getAlive())
-        os << "Bird is alive" << std::endl;
+std::ostream& operator<<(std::ostream& os, const Bird& a) {
+    os << "Bird age: " << a.age << std::endl;
+    os << "Bird id: " << a.id << std::endl;
 
-    os << "Bird age: " << b.getAge() << std::endl;
-    os << "Bird id: " << b.getId() << std::endl;
-    os << "Bird position " << "X: " << b.getX() << " Y: " << b.getY() << " Z: "
-    << b.getZ() << std::endl;
+    if (a.alive)
+        os << "Bird is alive" << std::endl;
+    else
+        os << "Dead" << std::endl;
+
+    os << "Bird position: " << "X: " << a.location[0] << " Y: " << a.location[1]
+       << " Z: " << a.location[2] << std::endl;
     return os;
 }

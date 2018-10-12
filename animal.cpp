@@ -49,39 +49,17 @@ void Animal::eat() {
     std::cout << "Animal eat" << std::endl;
 }
 
-// get id of animal
-long Animal::getId() const {
-    return id;
-}
-
-// get age of animal
-int Animal::getAge() const {
-    return age;
-}
-
-// check if animal is alive
-bool Animal::getAlive() const {
-    return alive;
-}
-
-// get x position of animal
-double Animal::getX() const {
-    return location[0];
-}
-
-// get y position of animal
-double Animal::getY() const {
-    return location[1];
-}
-
 // insertion operator
 std::ostream& operator<<(std::ostream& os, const Animal& a) {
-    if (a.alive)
-         os << "Animal is alive" << std::endl;
-
     os << "Animal age: " << a.age << std::endl;
     os << "Animal id: " << a.id << std::endl;
-    os << "Animal position: " << "X: " << a.getX() << " Y: " << a.getY()
+
+    if (a.alive)
+        os << "Animal is alive" << std::endl;
+    else
+        os << "Dead" << std::endl;
+
+    os << "Animal position: " << "X: " << a.location[0] << " Y: " << a.location[1]
        << std::endl;
     return os;
 }

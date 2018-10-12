@@ -16,13 +16,13 @@ int main() {
     b->eat();
     b->sleep();
     (dynamic_cast<Bird*>(b))->moves(4.0, 2.0, 3.0);
-    std::cout << *(Bird*)b << std::endl;
+    std::cout << (*dynamic_cast<Bird*>(b)) << std::endl;
 
     c->eat();
     c->sleep();
     c->moves(6.0, 6.0);
     (dynamic_cast<Canine*>(c))->hunt();
-    std::cout << *(Canine*)c << std::endl;
+    std::cout  << (*dynamic_cast<Canine*>(c)) << std::endl;
 
     delete a;
     delete b;
