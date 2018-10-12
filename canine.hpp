@@ -6,8 +6,6 @@ private:
     double location[2];
 
 public:
-    //static long uniqueId;
-
     Canine(); // default constructor
 
     Canine(int age1, double x1, double y1);

@@ -6,8 +6,6 @@ class Bird : public Animal { // inherit Animal class
 private:
     double location[3];
 public:
-    static long uniqueId;
-
     Bird();
 
     Bird(int age1, double x, double y, double z);
